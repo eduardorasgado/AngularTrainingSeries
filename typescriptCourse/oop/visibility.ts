@@ -1,10 +1,14 @@
 class Machine {
-    private name: string;
-    private weight: number;
+    //private name: string;
+    //private weight: number;
     private width: number;
     private height: number;
 
-    constructor() {
+    // automatically declared name as part of the class
+    // by declaring encapsularion in constructor params
+    constructor(private name: string, protected weight: number) {
+        //this.name = name;
+        //this.weight = weight;
         console.log("A machine was created");
     }
     getMachine(){
@@ -35,8 +39,9 @@ class Car extends Machine {
     private model: number;
     private serie: string;
 
-    constructor(){
-        super();
+    constructor(name: string, weight: number){
+        super(name, weight);
+
         console.log("A car was created");
     }
 
@@ -61,11 +66,11 @@ class Car extends Machine {
     }
 }
 
-var audi: Machine = new Car();
-audi.setName("racing car");
+var audi: Machine = new Car("racing car", 1800);
+audi.setName("racing car again");
 
-var scania: Car = new Car();
-scania.setName("truck");
+var scania: Car = new Car("truck", 3000);
+scania.setName("europe truck");
 scania.setMark("scania");
 
 console.log(audi.getMachine());

@@ -4,7 +4,7 @@ function add(a: number, b: number) {
 }
 
 // optional argument by using question mark ?
-function add2(a: number, b: number, c?: number){
+function add2(a: number, b: number, c?: number) : number{
     if(c != null){
         return a + b + c;
     }
@@ -12,9 +12,15 @@ function add2(a: number, b: number, c?: number){
 }
 
 // last number also is the ooptional and has a default value
-function mult(a: number, b: number, c: number = 0){
+function mult(a: number, b: number, c: number = 0) : number{
     return (a * b) + c;
 }
+
+// return type can be specified at the end of params
+function divide(a: number, b: number) : number {
+    return a / b;
+}
+
 var x: number;
 var y: number;
 var z: number;
@@ -31,3 +37,5 @@ z = mult(4, 4, 4);
 console.log(z);
 w = mult(4, 4);
 console.log(w);
+
+console.log(divide(10, 2));

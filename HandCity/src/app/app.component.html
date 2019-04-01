@@ -1,13 +1,9 @@
 <div style="text-align:center">
 
   <h2>{{ title }}</h2>
-
   <br>
-
   <ul>
-    <li>Floreria La Gardenia</li>
-    <li> Dunkin Domuts</li>
-    <li>Veterinaria La Garrapata</li>
+    <!-- ciclo for en angular -->
+    <li *ngFor="let lugar of lugares">{{ lugar.nombre }}</li>
   </ul>
-
 </div>

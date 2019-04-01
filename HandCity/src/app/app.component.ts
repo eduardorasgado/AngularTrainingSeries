@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string;
+  lugares: any = [
+    {nombre: 'Floreria La Gardenia'},
+    {nombre: 'Dunkin Domuts'},
+    {nombre: 'Veterinaria La Garrapata'}
+  ];
+
   constructor() {
     //
     this.title = 'HandCity';

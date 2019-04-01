@@ -14,9 +14,13 @@ export class AppComponent {
     { active: false, nombre: 'Sushi Sushiroll'},
     { active: true, nombre: 'Plaza Ambar'}
   ];
+  lat: number;
+  lng: number;
 
   constructor() {
     //
     this.title = 'HandCity';
+    this.lat = 16.4470856;
+    this.lng = -95.0141935;
   }
 }

@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AgmCoreModule } from '@agm/core';
+
 
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
+
+import { ApisConfig } from '../apisConfig';
 
 @NgModule({
   declarations: [
@@ -10,8 +13,10 @@ import {FormsModule} from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    // modulo necesario para poder realizar bindings con formularios en html
-    FormsModule
+    AgmCoreModule.forRoot({
+      // importando la llave de google maps de una clase de llaves
+      apiKey: ApisConfig.getGoogleMapApi()
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

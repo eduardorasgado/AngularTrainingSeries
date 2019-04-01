@@ -17,6 +17,13 @@ export class AppComponent {
   lat: number;
   lng: number;
 
+  personas: any = [
+    {nombre: 'Pedro Colina', edad: 15},
+    {nombre: 'Maria García', edad: 25},
+    {nombre: 'Jose Fernández', edad: 22},
+    {nombre: 'Ana Lopez', edad: 12}
+  ];
+
   constructor() {
     //
     this.title = 'HandCity';

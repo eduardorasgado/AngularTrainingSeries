@@ -17,5 +17,12 @@
     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
   </agm-map>
 
+  <br>
+  <h2>Personas mayores de edad</h2>
+  <ul>
+    <ng-container *ngFor="let persona of personas">
+      <li *ngIf="persona.edad >= 18">{{ persona.nombre }}</li>
+    </ng-container>
+  </ul>
 </div>
 

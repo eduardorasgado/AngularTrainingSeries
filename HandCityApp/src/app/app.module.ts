@@ -15,7 +15,8 @@ import { ApisConfig } from '../apisConfig';
     BrowserModule,
     AgmCoreModule.forRoot({
       // importando la llave de google maps de una clase de llaves
-      apiKey: ApisConfig.getGoogleMapApi()
+      // apiKey: ApisConfig.getGoogleMapApi()
+      apiKey: ''
     })
   ],
   providers: [],

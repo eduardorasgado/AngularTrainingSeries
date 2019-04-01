@@ -11,7 +11,7 @@ export class AppComponent {
   a = 3;
   b = 5;
   isReady = false;
-  interval;
+  interval = null;
 
   constructor() {
     // actualizar el valor de a cada segundo
@@ -19,5 +19,11 @@ export class AppComponent {
       this.interval = setInterval(() => { this.a++; }, 1000);
       this.isReady = true;
     }, 3000);
+  }
+
+  // podemos realizar event byding llamando a funciones desde el html
+  // usando (click) o sus semejantes
+  public increaseByThousand(): void {
+    this.b += 1000;
   }
 }

@@ -19,11 +19,10 @@ export class AppComponent {
     this.isReady = false;
     this.a = 1;
     this.b = 1;
+    this.nombre = '';
+    this.apellidos = '';
     // actualizar el valor de a cada segundo
-    setTimeout(() => {
-      this.interval = setInterval(() => { this.a++; }, 1000);
-      this.isReady = true;
-    }, 3000);
+    this.initMainFunctionality();
   }
 
   // podemos realizar event byding llamando a funciones desde el html
@@ -31,5 +30,12 @@ export class AppComponent {
   public increaseByThousand(): void {
     this.b += 1000;
     this.nombre = '';
+  }
+
+  public initMainFunctionality(): void {
+    setTimeout(() => {
+      this.interval = setInterval(() => { this.a++; }, 1000);
+      this.isReady = true;
+    }, 3000);
   }
 }

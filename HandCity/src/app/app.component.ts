@@ -6,36 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'HandCity';
-  // string interpolation
-  a: number;
-  b: number;
-  nombre: string;
-  apellidos: string;
-  isReady: boolean;
-  interval: any;
-
+  title: string;
   constructor() {
-    this.isReady = false;
-    this.a = 1;
-    this.b = 1;
-    this.nombre = '';
-    this.apellidos = '';
-    // actualizar el valor de a cada segundo
-    this.initMainFunctionality();
-  }
-
-  // podemos realizar event byding llamando a funciones desde el html
-  // usando (click) o sus semejantes
-  public increaseByThousand(): void {
-    this.b += 1000;
-    this.nombre = '';
-  }
-
-  public initMainFunctionality(): void {
-    setTimeout(() => {
-      this.interval = setInterval(() => { this.a++; }, 1000);
-      this.isReady = true;
-    }, 3000);
+    //
+    this.title = 'HandCity';
   }
 }

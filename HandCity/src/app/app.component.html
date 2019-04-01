@@ -9,4 +9,12 @@
   <!-- data binding: de html a typescript -->
   <!-- entre los parentesis se espera codigo de ttypescript -->
   <button role="buttton" [disabled]="!isReady" (click)="increaseByThousand()">Click this</button>
+  <br>
+  <!-- two way databinding -->
+  <label for="nombre">Nombre </label>
+  <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" [(ngModel)]="nombre">
+  <label for="apellido">Apellido</label>
+  <input type="text" name="apellido"  id="apellido" placeholder="Tus apellidos" [(ngModel)]="apellidos" >
+  <br>
+  Mi nombre es: {{ nombre }} {{ apellidos }}
 </div>

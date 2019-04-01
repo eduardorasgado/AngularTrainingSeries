@@ -4,6 +4,9 @@
   <br>
   <ul>
     <!-- ciclo for en angular -->
-    <li *ngFor="let lugar of lugares">{{ lugar.nombre }}</li>
+    <ng-container *ngFor="let lugar of lugares">
+      <!--solo si el lugar esta activo entonces se mostrara -->
+      <li *ngIf="lugar.active">{{ lugar.nombre}}</li>
+    </ng-container>
   </ul>
 </div>

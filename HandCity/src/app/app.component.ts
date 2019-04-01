@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string;
   lugares: any = [
-    {nombre: 'Floreria La Gardenia'},
-    {nombre: 'Dunkin Domuts'},
-    {nombre: 'Veterinaria La Garrapata'}
+    { active: true, nombre: 'Floreria La Gardenia'},
+    { active: true, nombre: 'Dunkin Domuts'},
+    { active: true, nombre: 'Veterinaria La Garrapata'},
+    { active: false, nombre: 'Sushi Sushiroll'},
+    { active: true, nombre: 'Plaza Ambar'}
   ];
 
   constructor() {

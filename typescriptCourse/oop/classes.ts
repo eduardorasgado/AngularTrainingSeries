@@ -1,3 +1,30 @@
+
+enum Type {
+  Normal = "Normal",
+  Agua = "Agua",
+  Fuego = "Fuego",
+  Tierra = "Tierra",
+  Viento = "Viento"
+}
+
+class Animal {
+  type: Type;
+  life: number;
+
+  constructor(type?: Type, life?: number) {
+    this.type = type != null ? type : Type.Normal;
+    this.life = life != null ? life : 100;
+  }
+
+  getLife() {
+    return this.life;
+  }
+
+  getType() {
+    return this.type;
+  }
+}
+
 class Person {
     // attributes
     firstName: string;
@@ -28,3 +55,9 @@ p2.firstName = "Nunito";
 
 console.log(p1.getFullName());
 console.log(p2.getFullName());
+
+var a1: Animal;
+var tipo_agua: Type;
+tipo_agua = Type.Fuego;
+a1 = new Animal(tipo_agua, 98);
+console.log(a1.getType());
